@@ -13,10 +13,10 @@
 
   <tbody>
     <% @statuses.each do |status| %>
-      <tr>
+      <tr class="status">
         <td><%= status.name %></td>
         <td><%= status.content %></td>
-        <td>
+        <td class="admin">
        
         <%= link_to "Hace: "  + time_ago_in_words(status.created_at), status%> </td>
         <td><%= link_to 'Editar', edit_status_path(status) %></td>
