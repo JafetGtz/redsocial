@@ -1,3 +1,11 @@
+
+<div class="container">
+
+
+
+
+
+
 <%= form_with(model: status, local: true) do |form| %>
   <% if status.errors.any? %>
     <div id="error_explanation">
@@ -11,17 +19,30 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, :class => "form-control" %>
   </div>
 
-  <div class="field">
+   <div class="form-group">
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, :class => "form-control" %>
   </div>
 
-  <div class="actions">
+   <div class="form-group">
     <%= form.submit %>
+   
   </div>
 <% end %>
+
+
+
+
+
+
+</div>
+
+
+
+
+
